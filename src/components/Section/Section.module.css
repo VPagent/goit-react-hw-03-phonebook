@@ -1,0 +1,9 @@
+@modern-normalize;
+
+.section{
+    display: block;
+    background-color: gray;
+    text-align: center;
+    margin-top: 60px;
+    padding: 20px 60px;
+}

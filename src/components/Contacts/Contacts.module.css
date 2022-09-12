@@ -1,0 +1,32 @@
+.contactForm{
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contactForm:hover{
+    box-shadow: 2px 2px 2px red;
+}
+.contactInput{
+    width: 200px;
+    margin-top: 20px;
+}
+.contactList{
+    display: flex;
+    flex-direction: column;
+}
+.contactItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: orangered;
+    border-radius: 5px;
+
+    font-size: 20px;
+
+}

@@ -1,0 +1,18 @@
+.form{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 40px;
+    
+}
+.form:hover{
+    box-shadow:  2px 2px 2px  red;
+}
+.input{
+    margin-left: 20px;
+}
+.label{
+    align-items: center;
+}
+.label:first-child{
+    margin-right: 10px;
+}
