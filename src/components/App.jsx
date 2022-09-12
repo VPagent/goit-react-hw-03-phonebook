@@ -12,7 +12,7 @@ export class App extends Component {
   };
   
   componentDidMount(){
-    const { contacts } = this.state
+    // const { contacts } = this.state
     const savedContacts = localStorage.getItem("contacts")
     console.log(savedContacts)
     if (savedContacts){
