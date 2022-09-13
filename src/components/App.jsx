@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Form from 'components/Form';
 import Section from 'components/Section';
 import Contacts from 'components/Contacts';
-import PropTipes from 'prop-types'
+
 
 
 export class App extends Component {
@@ -12,9 +12,8 @@ export class App extends Component {
   };
   
   componentDidMount(){
-    // const { contacts } = this.state
     const savedContacts = localStorage.getItem("contacts")
-    console.log(savedContacts)
+
     if (savedContacts){
       this.setState({contacts: JSON.parse(savedContacts)})
     }
@@ -60,25 +59,16 @@ export class App extends Component {
           color: '#010101',
         }}
       >
-        <Section title={"Phonebook"}>
-          <Form onSetApp={this.changeState} options={this.state.contacts}></Form>
+        <Section title="Phonebook">
+          <Form onSetApp={this.changeState} options={this.state.contacts}/>
         </Section>
-        <Section title={"Contacts"}>
-          <Contacts options={!filterValue? this.state.contacts : this.handleFilter()} onChangeInput={this.handleChange} filterValue={this.state.filter} onHandle={this.handleDelete}/>
+        <Section title="Contacts">
+          <Contacts options={!filterValue? this.state.contacts : this.handleFilter()} onChangeInput={this.handleChange} filterValue={this.state.filter} onHandleDelete={this.handleDelete}/>
         </Section>
       </div>
     );
   }
 }
 
-App.propTipes = {
-  state: PropTipes.shape({
-    contacts: PropTipes.array,
-    filter: PropTipes.string
-  }),
-  changeState: PropTipes.shape({
-    arr: PropTipes.array
-  })
-}
 
 
